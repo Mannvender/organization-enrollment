@@ -5,6 +5,9 @@ const theme = extendTheme({
     heading: 'Inter, sans-serif',
     body: 'Inter, sans-serif',
   },
+  colors: {
+    brand: '#664de5',
+  },
 });
 
 export default theme;
