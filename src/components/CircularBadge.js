@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 
-function CircularBadge({ children, isFilled, size }) {
+function CircularBadge({ children, isFilled, size, ...rest }) {
   return (
     <Box
       display="flex"
@@ -14,6 +14,8 @@ function CircularBadge({ children, isFilled, size }) {
       borderWidth={1.5}
       borderColor={isFilled ? 'brand' : 'gray.200'}
       borderStyle="solid"
+      sx={{ cursor: 'pointer' }}
+      {...rest}
     >
       {children}
     </Box>

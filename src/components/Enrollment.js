@@ -23,12 +23,19 @@ function getInputs(stepNumber) {
 function Enrollment() {
   const [step, setStep] = useState(1);
   const handleNextStep = () => {
+    if (step === 4) alert('End of user flow');
     setStep(step + 1);
   };
+  const jumpToStep = stepNumber => setStep(stepNumber);
+
   return (
-    <Box maxWidth="500px" mx="auto" py={24}>
+    <Box maxWidth="500px" mx="auto" py={[8, 24]} px={[4, 0]}>
       <Header />
-      <StepIndicator numberOfSteps={4} currentStep={step} />
+      <StepIndicator
+        numberOfSteps={4}
+        currentStep={step}
+        onChange={jumpToStep}
+      />
       {getInputs(step)}
       <Button size="lg" isFullWidth onClick={handleNextStep}>
         {step === 4 ? 'Launch Eden' : 'Create Workspace'}
