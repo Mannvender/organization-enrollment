@@ -7,7 +7,7 @@ import {
   InputLeftAddon,
 } from '@chakra-ui/react';
 
-function WorkspaceInputs({}) {
+function WorkspaceInputs() {
   return (
     <>
       <Box textAlign={'center'} mb={[10]}>

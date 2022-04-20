@@ -17,7 +17,7 @@ const OPTIONS = [
   },
 ];
 
-function PurposeInputs({}) {
+function PurposeInputs() {
   const [purpose, setPurpose] = useState(OPTIONS[0].value);
   const handleClick = () => {
     if (purpose === OPTIONS[0].value) setPurpose(OPTIONS[1].value);

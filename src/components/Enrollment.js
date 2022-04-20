@@ -17,6 +17,8 @@ function getInputs(stepNumber) {
       return <PurposeInputs />;
     case 4:
       return <Congratulations />;
+    default:
+      return <div>Something went wrong</div>;
   }
 }
 
