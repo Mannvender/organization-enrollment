@@ -8,7 +8,7 @@ function UserInputs({ value }) {
         </Heading>
         <Text color="gray.500">You can always change them later</Text>
       </Box>
-      <label for="user.name">Full Name</label>
+      <label htmlFor="user.name">Full Name</label>
       <Input
         placeholder="Steve Jobs"
         id="user.name"
@@ -16,7 +16,7 @@ function UserInputs({ value }) {
         size="lg"
         mb={[6]}
       />
-      <label for="user.display.name">Display Name</label>
+      <label htmlFor="user.display.name">Display Name</label>
       <Input
         placeholder="Steve"
         id="user.display.name"

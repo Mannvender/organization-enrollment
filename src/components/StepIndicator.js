@@ -1,5 +1,7 @@
+import { Fragment } from 'react';
 import { Box } from '@chakra-ui/react';
 import Progress from 'components/Progress';
+import CircularBadge from 'components/CircularBadge';
 
 function StepIndicator({ numberOfSteps = 4, currentStep }) {
   const getProgressValue = i => {
@@ -16,33 +18,15 @@ function StepIndicator({ numberOfSteps = 4, currentStep }) {
       mb={20}
     >
       {[...Array(numberOfSteps).keys()].map(index => (
-        <>
-          <StepNumber number={index + 1} isFilled={index < currentStep} />
+        <Fragment key={index}>
+          <CircularBadge size={12} isFilled={index < currentStep}>
+            {index + 1}
+          </CircularBadge>
           {index < numberOfSteps - 1 && (
             <Progress value={getProgressValue(index)} />
           )}
-        </>
+        </Fragment>
       ))}
-    </Box>
-  );
-}
-
-function StepNumber({ number, isFilled }) {
-  return (
-    <Box
-      display="flex"
-      borderRadius={'50%'}
-      bgColor={isFilled ? 'brand' : 'white'}
-      color={isFilled ? 'white' : 'gray.600'}
-      height={12}
-      width={12}
-      justifyContent="center"
-      alignItems="center"
-      borderWidth={1.5}
-      borderColor={isFilled ? 'brand' : 'gray.200'}
-      borderStyle="solid"
-    >
-      {number}
     </Box>
   );
 }

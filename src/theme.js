@@ -24,6 +24,9 @@ const theme = extendTheme({
           color: 'white',
           fontSize: '16px',
           fontWeight: 600,
+          _hover: {
+            bg: '#3d2e89',
+          },
         },
       },
     },

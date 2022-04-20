@@ -18,7 +18,7 @@ function WorkspaceInputs({}) {
           You can always create another workspace later
         </Text>
       </Box>
-      <label for="workspace.name">Workspace Name</label>
+      <label htmlFor="workspace.name">Workspace Name</label>
       <Input
         placeholder="Eden"
         id="workspace.name"
@@ -26,7 +26,7 @@ function WorkspaceInputs({}) {
         size="lg"
         mb={[6]}
       />
-      <label for="url">
+      <label htmlFor="url">
         Workspace URL
         <Text display="inline" color="gray.500" ml={[1]}>
           (optional)

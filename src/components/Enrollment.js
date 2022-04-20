@@ -5,6 +5,7 @@ import StepIndicator from 'components/StepIndicator';
 import UserInputs from 'components/UserInputs';
 import WorkspaceInputs from 'components/WorkspaceInput';
 import PurposeInputs from 'components/PurposeInputs';
+import Congratulations from 'components/Congratulations';
 
 function getInputs(stepNumber) {
   switch (stepNumber) {
@@ -14,6 +15,8 @@ function getInputs(stepNumber) {
       return <WorkspaceInputs />;
     case 3:
       return <PurposeInputs />;
+    case 4:
+      return <Congratulations />;
   }
 }
 
@@ -28,7 +31,7 @@ function Enrollment() {
       <StepIndicator numberOfSteps={4} currentStep={step} />
       {getInputs(step)}
       <Button size="lg" isFullWidth onClick={handleNextStep}>
-        Create Workspace
+        {step === 4 ? 'Launch Eden' : 'Create Workspace'}
       </Button>
     </Box>
   );

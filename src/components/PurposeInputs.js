@@ -43,6 +43,7 @@ function CustomSwitch({ value, onChange }) {
     <Box display={'flex'} flexDir="row" justifyContent="space-between" mb={[6]}>
       {OPTIONS.map(option => (
         <Box
+          key={option.value}
           p={[5]}
           flexBasis="48%"
           borderWidth={[1]}
