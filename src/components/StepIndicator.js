@@ -13,6 +13,7 @@ function StepIndicator({ numberOfSteps = 4, currentStep }) {
       flexDir="row"
       alignItems="center"
       justifyContent="center"
+      mb={20}
     >
       {[...Array(numberOfSteps).keys()].map(index => (
         <>
@@ -32,7 +33,7 @@ function StepNumber({ number, isFilled }) {
       display="flex"
       borderRadius={'50%'}
       bgColor={isFilled ? 'brand' : 'white'}
-      color={isFilled ? 'white' : 'black'}
+      color={isFilled ? 'white' : 'gray.600'}
       height={12}
       width={12}
       justifyContent="center"
