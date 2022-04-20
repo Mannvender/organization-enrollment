@@ -4,6 +4,7 @@ import Header from 'components/Header';
 import StepIndicator from 'components/StepIndicator';
 import UserInputs from 'components/UserInputs';
 import WorkspaceInputs from 'components/WorkspaceInput';
+import PurposeInputs from 'components/PurposeInputs';
 
 function getInputs(stepNumber) {
   switch (stepNumber) {
@@ -11,6 +12,8 @@ function getInputs(stepNumber) {
       return <UserInputs />;
     case 2:
       return <WorkspaceInputs />;
+    case 3:
+      return <PurposeInputs />;
   }
 }
 
